@@ -1,0 +1,59 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Brand Mapping
+  </h1>
+  <div class="form-control-wrap" *ngIf="!onLoginClick">
+    <h2>Please enter following details.</h2>
+
+    <form>
+      <!--action="" method="post"-->
+      <fieldset>
+        <legend>User Details</legend>
+        <div>
+          <label for="firstName">First Name<small class="red">*</small>:</label>
+          <input (keyup.enter)="onSubmit(firstName, lastName, email)" name="firstName"
+                 type="text" aria-describedby="firstName-format" id="txtFirstName" [(ngModel)]="firstName"
+                 class="form-control" placeholder="First Name" required autofocus #spy1>
+          <span id="firstname-format" class="help">{{spy1.className}}</span>
+          <!--<div *ngIf="{{sp1.className}}:devi" class="alert alert-danger">
+            First Name is required
+          </div>-->
+        </div>
+        <div>
+          <label for="lastName">Last Name<small class="red">*</small>:</label>
+          <input (keyup.enter)="onSubmit(firstName, lastName, email)" name="lastName"
+                 type="text" aria-describedby="lastName-format" id="txtLastName" [(ngModel)]="lastName"
+                 class="form-control" placeholder="Last Name" required autofocus #spy2>
+
+          <span id="lastname-format" class="help">{{spy2.className}}</span>
+
+          <!--<div [hidden]="lastName.valid || lastName.untouched"
+               class="alert alert-danger">
+            Last Name is required
+          </div>-->
+        </div>
+        <div>
+          <label for="email">Email <small class="red">*</small>:</label>
+          <input (keyup.enter)="onSubmit(firstName, lastName, email)" name="email" type="email"
+                 aria-describedby="email-format" id="txtEmail" [(ngModel)]="email" class="form-control"
+                 placeholder="Email Address" required autofocus #spy3>
+
+          <span id="email-format" class="help">{{spy3.className}}</span>
+          <!--<div [hidden]="spy3.valid || spy3.untouched"
+               class="alert alert-danger">
+            Email is required
+          </div>-->
+        </div>
+        <div class="submit">
+          <button (click)=" onProceed(firstName, lastName, email); onLoginClick= 'true'" class=" btn btn-primary short">Proceed</button><!--type="submit"-->
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+
+
+  <div *ngIf="onLoginClick"><app-brand [user] = "user"></app-brand></div>
+</div>
+

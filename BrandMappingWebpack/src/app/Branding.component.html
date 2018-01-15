@@ -1,0 +1,45 @@
+<h3>
+  <span>Welcome, {{user.firstName}} {{user.lastName}} </span>
+</h3>
+<div class="container">
+  <div class="keywords">
+    <div class="tile voice">Voice</div>
+    <div class="tile voice-tile" *ngFor="let keyWord of lists.voice;" [dragDirective]='keyWord' [dragHightlight]="'highlight'">{{keyWord}}</div>
+    <div class="tile style">style</div>
+    <div class="tile style-tile" *ngFor="let keyWord of lists.style;" [dragDirective]='keyWord' [dragHightlight]="'highlight'">{{keyWord}}</div>
+    <div class="tile behaviour">behaviour</div>
+    <div class="tile behaviour-tile" *ngFor="let keyWord of lists.behaviour;" [dragDirective]='keyWord' [dragHightlight]="'highlight'">{{keyWord}}</div>
+  </div>
+  <div class="who">
+    <div class="weAre" dropDirective (dropEvent)="addDropItem($event,whoWeAre)">
+      <b>Who we are?</b>
+      <div class="weAre-dropArea">
+        <div *ngFor="let keyWord of whoWeAre;">
+          <div class="tile" [ngClass]="getClass(keyWord)" (releaseDrop)="releaseDrop($event, whoWeAre)" [dragDirective]='keyWord' [dragHightlight]="'highlight'">{{keyWord}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="weLike" dropDirective (dropEvent)="addDropItem($event,weWouldLike)">
+      <b>Who we'd like to be?</b>
+      <div class="weLike-dropArea">
+        <div *ngFor="let keyWord of weWouldLike;">
+          <div class="tile" [ngClass]="getClass(keyWord)" (releaseDrop)="releaseDrop($event, weWouldLike)" [dragDirective]='keyWord' [dragHightlight]="'highlight'">{{keyWord}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="weDont" dropDirective (dropEvent)="addDropItem($event,weDontWant)">
+      <b>Who we don't want to be?</b>
+      <div class="weDont-dropArea">
+        <div *ngFor="let keyWord of weDontWant;">
+          <div class="tile" [ngClass]="getClass(keyWord)" (releaseDrop)="releaseDrop($event, weDontWant)" [dragDirective]='keyWord' [dragHightlight]="'highlight'">{{keyWord}}</div>
+        </div>
+      </div>
+    </div>
+    <div class="buttonSection">
+      <button class="submit btn btn-primary" (click)="OnSubmit()">Submit</button>
+      <!--<button class="submit btn btn-primary" (click)="OnSubmit()">Save</button>-->
+      <button class="reset btn btn-default" (click)="OnReset()">Reset</button>
+    </div>
+  </div>
+</div>
+

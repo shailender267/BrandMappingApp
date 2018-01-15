@@ -1,0 +1,207 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  /*background: #b4e0e2;*/
+}
+
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+
+.container {
+  margin: 0px auto;
+  width: 1800px;
+}
+
+.keywords {
+  float: left;
+  width: 65%;
+  margin-right: 1%;
+}
+
+.who {
+  float: left;
+  width: 34%;
+}
+
+.tile {
+  padding: 5px 10px;
+  border: 1px solid #adadad;
+  float: left;
+  text-transform: uppercase;
+  font-family: calibri;
+  font-weight: bold;
+  width: 155px;
+  margin: 10px;
+}
+
+.voice {
+  background: gray;
+  color: white;
+}
+
+.style {
+  background: orange;
+  color: white;
+}
+
+.behaviour {
+  background: #666;
+  color: white;
+}
+
+.voice-tile {
+  color: gray;
+}
+
+.style-tile {
+  color: orange;
+}
+
+.behaviour-tile {
+  color: #666;
+}
+
+/*div:nth-child(91),
+div:nth-child(89) {
+  font-size: 13px;
+  padding: 4px 20px;
+  word-spacing: 10px;
+}
+div:nth-child(85) {
+  padding: 3px 20px;
+  font-size: 13.5px;
+}*/
+
+.who b {
+  font-size: 24px;
+  display: block;
+}
+
+.weAre, .weLike, .weDont {
+  border: 1px solid #adadad;
+  min-height: 200px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.weAre-dropArea,
+.weLike-dropArea,
+.weDont-dropArea {
+  overflow: hidden;
+}
+
+button.submit,
+button.reset {
+  padding: 10px 20px;
+  margin-bottom: 0;
+  font-size: 20px;
+  /*font-weight: 400;
+  line-height: 1.42857143;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;*/
+  float: right;
+  width: 30%;
+}
+
+button.submit {
+  /*color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;*/
+  margin-left: 30px;
+}
+
+.short {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/*button.submit:hover {
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+  }*/
+
+/*button.reset {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+  button.reset:hover {
+    color: #333;
+    background-color: #e6e6e6;
+    border-color: #adadad;
+  }*/
+
+
+.red {
+  color: red;
+}
+
+fieldset {
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  text-align: left;
+  border: 2px solid #c0c0c0;
+}
+
+  fieldset div {
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+/*fieldset div label {
+      width: 150px;
+      float: left;
+      text-align: right;
+      padding-right: 20px;
+    }*/
+
+/*fieldset div input {
+      float: left;
+      margin: 0px 10px;
+    }*/
+
+/*fieldset div span {
+      float: left;
+    }*/
+
+
+.submit input {
+  float: none;
+}
+
+.ng-valid[required], .ng-valid.required {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form) {
+  border-left: 5px solid #a94442; /* red */
+}
+
+
+/*Bootstrap override*/
+
+legend {
+  width: auto;
+  border-bottom: none;
+  text-align: center;
+}
+
+.form-control.ng-pristine.ng-invalid.ng-untouched {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);
+}
